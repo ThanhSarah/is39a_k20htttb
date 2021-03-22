@@ -10,8 +10,9 @@ class m_tin_tuc extends CI_Model {
                 return $query->result();
         }
 
-        public function insert_tin_tuc()
+        public function insert_tin_tuc($data)
         {
+                $this->db->insert('tbl_tin_tuc', $data);
         }
 
         public function update_tin_tuc()

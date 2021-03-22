@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 18, 2021 at 09:02 AM
+-- Generation Time: Mar 22, 2021 at 08:09 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 5.6.40
 
@@ -51,7 +51,42 @@ CREATE TABLE `tbl_tin_tuc` (
 
 INSERT INTO `tbl_tin_tuc` (`tin_tuc_id`, `tieu_de`, `mo_ta`, `noi_dung`, `anh_minh_hoa`, `is_active`, `is_stick`, `total_read`, `ghi_chu`, `created_by`, `created_time`, `modified_by`, `modified_time`, `modified_log`) VALUES
 (1, 'Quyết định công nhận kết quả trúng tuyển kỳ tuyển dụng viên chức, người lao động năm 2020', 'Đề nghị ông/bà đến phòng Tổ chức cán bộ để hoàn thiện hồ sơ tuyển dụng theo quy định của pháp luật từ 7h30 ngày 22/2/2021 tới 17h ngày 26/2/2021.', 'Hồ sơ tuyển dụng gồm 2 bộ, trong đó 1 bộ bản chính (để đối chiếu) và 1 bộ bản sao có công chứng, chứng thực của cơ quan có thẩm quyền, cụ thể:\r\n- Văn bằng, chứng chỉ theo yêu cầu của vị trí việc làm dự tuyển, chứng nhận đối tượng ưu tiên (nếu có)\r\n- Phiếu lý lịch tư pháp do cơ quan có thẩm quyền cấp.', 'tuyen_dung.jpg', 1, 2, 0, NULL, NULL, '2021-03-18 08:01:37', NULL, NULL, NULL),
-(2, 'Giới thiệu ông Phạm Minh Chính ứng cử Quốc hội khối Chính phủ', 'Ông Phạm Minh Chính, Trưởng ban Tổ chức Trung ương, được giới thiệu ứng cử đại biểu Quốc hội ở khối Chính phủ.', 'Sáng 18/3, Đoàn chủ tịch Ủy ban Trung ương Mặt trận tổ quốc Việt Nam tổ chức hội nghị hiệp thương lần thứ 2 để thỏa thuận lập danh sách sơ bộ người của các cơ quan Trung ương ứng cử Đại biểu Quốc hội khóa XV.\r\n\r\nDanh sách những người được giới thiệu khối Chính phủ gồm 15 ứng viên, trong đó có: Ông Phạm Minh Chính, Trưởng ban Tổ chức Trung ương; ông Nguyễn Hồng Diên, Phó trưởng ban Tuyên giáo Trung ương; ông Hồ Đức Phớc, Tổng kiểm toán Nhà nước; ông Phan Văn Giang, Tổng tham mưu trưởng QĐND VN, Thứ trưởng Quốc phòng; ông Nguyễn Kim Sơn, Giám đốc Đại học Quốc gia Hà Nội...', 'Pham-Minh-Chinh-2735-1616036330.jpg', 1, 2, 0, NULL, NULL, '2021-03-18 08:01:37', NULL, NULL, NULL);
+(2, 'Giới thiệu ông Phạm Minh Chính ứng cử Quốc hội khối Chính phủ', 'Ông Phạm Minh Chính, Trưởng ban Tổ chức Trung ương, được giới thiệu ứng cử đại biểu Quốc hội ở khối Chính phủ.', 'Sáng 18/3, Đoàn chủ tịch Ủy ban Trung ương Mặt trận tổ quốc Việt Nam tổ chức hội nghị hiệp thương lần thứ 2 để thỏa thuận lập danh sách sơ bộ người của các cơ quan Trung ương ứng cử Đại biểu Quốc hội khóa XV.\r\n\r\nDanh sách những người được giới thiệu khối Chính phủ gồm 15 ứng viên, trong đó có: Ông Phạm Minh Chính, Trưởng ban Tổ chức Trung ương; ông Nguyễn Hồng Diên, Phó trưởng ban Tuyên giáo Trung ương; ông Hồ Đức Phớc, Tổng kiểm toán Nhà nước; ông Phan Văn Giang, Tổng tham mưu trưởng QĐND VN, Thứ trưởng Quốc phòng; ông Nguyễn Kim Sơn, Giám đốc Đại học Quốc gia Hà Nội...', 'Pham-Minh-Chinh-2735-1616036330.jpg', 1, 2, 0, NULL, NULL, '2021-03-18 08:01:37', NULL, NULL, NULL),
+(3, 'Chương trình Sinh viên tài năng (Viettel Digital Talent Program)', 'Chương trình Sinh viên tài năng (Viettel Digital Talent Program)', 'Chương trình Sinh viên tài năng (Viettel Digital Talent Program)', 'tuyen_dung.jpg', 1, 2, 0, NULL, NULL, '2021-03-22 04:53:03', NULL, NULL, NULL),
+(4, 'SAP TechTalk - Are you ready for the future of work?', 'Chương trình Sinh viên tài năng (Viettel Digital Talent Program)', 'Chương trình Sinh viên tài năng (Viettel Digital Talent Program)', 'tuyen_dung.jpg', 1, 2, 0, NULL, NULL, '2021-03-22 04:54:14', NULL, NULL, NULL),
+(5, 'Phân công GVHD thực hiện Khóa luận & Chuyên đề tốt nghiệp K20HTTT', 'Chương trình Sinh viên tài năng (Viettel Digital Talent Program)', 'Chương trình Sinh viên tài năng (Viettel Digital Talent Program)', 'tuyen_dung.jpg', 1, 2, 0, NULL, NULL, '2021-03-22 04:54:41', NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_user`
+--
+
+CREATE TABLE `tbl_user` (
+  `user_id` int(11) NOT NULL,
+  `ten_tai_khoan` varchar(50) NOT NULL,
+  `mat_khau` varchar(50) NOT NULL,
+  `ho_va_ten` varchar(50) NOT NULL,
+  `anh_dai_dien` varchar(50) DEFAULT NULL,
+  `so_dien_thoai` varchar(20) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `quyen_han_id` int(11) NOT NULL DEFAULT '1',
+  `is_active` int(11) NOT NULL DEFAULT '1',
+  `ghi_chu` text,
+  `created_by` int(11) DEFAULT NULL,
+  `created_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modified_by` int(11) DEFAULT NULL,
+  `modified_time` datetime DEFAULT NULL,
+  `modified_log` text
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_user`
+--
+
+INSERT INTO `tbl_user` (`user_id`, `ten_tai_khoan`, `mat_khau`, `ho_va_ten`, `anh_dai_dien`, `so_dien_thoai`, `email`, `quyen_han_id`, `is_active`, `ghi_chu`, `created_by`, `created_time`, `modified_by`, `modified_time`, `modified_log`) VALUES
+(1, 'admin@k20htttb.com', '123', 'Quản Văn Trị', NULL, NULL, 'admin@k20htttb.com', 1, 1, NULL, NULL, '2021-03-22 03:32:05', NULL, NULL, NULL),
+(2, 'huycv@bav.edu.vn', '123', 'Chu Văn Huy', NULL, NULL, 'huycv@bav.edu.vn', 1, 1, NULL, NULL, '2021-03-22 03:32:05', NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -64,6 +99,12 @@ ALTER TABLE `tbl_tin_tuc`
   ADD PRIMARY KEY (`tin_tuc_id`);
 
 --
+-- Indexes for table `tbl_user`
+--
+ALTER TABLE `tbl_user`
+  ADD PRIMARY KEY (`user_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -71,7 +112,13 @@ ALTER TABLE `tbl_tin_tuc`
 -- AUTO_INCREMENT for table `tbl_tin_tuc`
 --
 ALTER TABLE `tbl_tin_tuc`
-  MODIFY `tin_tuc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `tin_tuc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `tbl_user`
+--
+ALTER TABLE `tbl_user`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

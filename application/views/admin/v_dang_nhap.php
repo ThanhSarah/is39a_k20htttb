@@ -41,19 +41,17 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Đăng nhập hệ thống</h1>
                                     </div>
-                                    <form class="user">
+                                    <form class="user" method="POST" action="./dang_nhap/thuc_hien_dang_nhap">
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
+                                            <input name="txtEmail" type="email" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
                                                 placeholder="Email đăng nhập">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
+                                            <input name="txtPassword" type="password" class="form-control form-control-user"
                                                 id="exampleInputPassword" placeholder="Mật khẩu">
                                         </div>
-                                        <a href="index.html" class="btn btn-primary btn-user btn-block">
-                                            Đăng nhập
-                                        </a>
+                                        <button class="btn btn-primary btn-user btn-block">Đăng nhập</button>
                                     </form>
                                     <hr>
                                     <div class="text-center">

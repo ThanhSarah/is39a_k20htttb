@@ -389,13 +389,13 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?php foreach ($noi_dung_tin_tuc as $row) {
+                                    <?php foreach ($thong_tin_san_pham as $row) {
                                     ;?>
                                         <tr>
-                                            <td><?php echo $row->tin_tuc_id;?></td>
+                                            <td><?php echo $row->id_san_pham;?></td>
                                             <td><img style="width: 60px; height: auto;" src="../img/<?php echo $row->anh_minh_hoa;?>"></td>
-                                            <td><?php echo $row->tieu_de;?></td>
-                                            <td><a href="./quan_tri_tin_tuc/sua/<?php echo $row->tin_tuc_id;?>">Sửa</a> | <a href="./quan_tri_tin_tuc/xoa/<?php echo $row->tin_tuc_id;?>">Xóa</a></td>
+                                            <td><?php echo $row->ten_san_pham;?></td>
+                                            <td><a href="./quan_tri_san_pham/sua/<?php echo $row->id_san_pham;?>">Sửa</a> | <a href="./quan_tri_san_pham/xoa/<?php echo $row->id_san_pham;?>">Xóa</a></td>
                                         </tr>
                                     <?php };?>
                                     </tbody>

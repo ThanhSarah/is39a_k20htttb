@@ -383,19 +383,19 @@
                                     <thead>
                                         <tr>
                                             <th>STT</th>
-                                            <th>Ảnh minh họa</th>
-                                            <th>Tiêu đề</th>
+                                            <th>Họ tên liên hệ</th>
+                                            <th>Nội dung liên hệ</th>
                                             <th>Hiệu chỉnh</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?php foreach ($noi_dung_tin_tuc as $row) {
+                                    <?php foreach ($thong_tin_lien_he as $row) {
                                     ;?>
                                         <tr>
-                                            <td><?php echo $row->tin_tuc_id;?></td>
-                                            <td><img style="width: 60px; height: auto;" src="../img/<?php echo $row->anh_minh_hoa;?>"></td>
-                                            <td><?php echo $row->tieu_de;?></td>
-                                            <td><a href="./quan_tri_tin_tuc/sua/<?php echo $row->tin_tuc_id;?>">Sửa</a> | <a href="./quan_tri_tin_tuc/xoa/<?php echo $row->tin_tuc_id;?>">Xóa</a></td>
+                                            <td><?php echo $row->id_lien_he;?></td>
+                                            <td><?php echo $row->ho_ten;?></td>
+                                            <td><?php echo $row->noi_dung_lien_he;?></td>
+                                            <td><a href="./quan_tri_lien_he/sua/<?php echo $row->id_lien_he;?>">Sửa</a> | <a href="./quan_tri_lien_he/xoa/<?php echo $row->id_lien_he;?>">Xóa</a></td>
                                         </tr>
                                     <?php };?>
                                     </tbody>

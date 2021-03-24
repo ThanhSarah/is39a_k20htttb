@@ -32,7 +32,7 @@ class Dang_nhap extends CI_Controller {
 		$password = $_POST["txtPassword"];
 
 		// Check thử dữ liệu chuyển sang ok không?
-		echo $email." | ".$password;
+		// echo $email." | ".$password;
 
 		// Kiểm tra xem người dùng có được phép truy cập vào phần quản trị hay không?
 		if ($this->m_user->check_user($email, $password)==1) {
@@ -67,5 +67,15 @@ class Dang_nhap extends CI_Controller {
 				</script>
 			";
 		}
+	}
+
+	public function dang_xuat() {
+		session_destroy();
+		echo "
+				<script type='text/javascript'>
+					window.alert('Đăng xuất thành công');
+					window.location.href='../dang_nhap';
+				</script>
+			";
 	}
 }

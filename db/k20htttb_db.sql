@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 22, 2021 at 08:09 AM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 5.6.40
+-- Máy chủ: localhost
+-- Thời gian đã tạo: Th3 24, 2021 lúc 07:26 PM
+-- Phiên bản máy phục vụ: 10.4.17-MariaDB
+-- Phiên bản PHP: 7.3.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,13 +18,61 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `k20htttb_db`
+-- Cơ sở dữ liệu: `k20htttb_db`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_tin_tuc`
+-- Cấu trúc bảng cho bảng `tbl_lien_he`
+--
+
+CREATE TABLE `tbl_lien_he` (
+  `id_lien_he` int(11) NOT NULL,
+  `ho_ten` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `dien_thoai` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `noi_dung_lien_he` text COLLATE utf8_unicode_ci NOT NULL,
+  `noi_dung_phuc_dap` text COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `tbl_lien_he`
+--
+
+INSERT INTO `tbl_lien_he` (`id_lien_he`, `ho_ten`, `email`, `dien_thoai`, `noi_dung_lien_he`, `noi_dung_phuc_dap`) VALUES
+(1, 'Nguyễn Thị Hà', 'hant@gmail.com', '0989999999', 'Tôi muốn hỏi về quy trình mua sản phẩm bên công ty. Bên công ty có hỗ trợ giao hàng cho tôi miễn phí?', NULL),
+(2, 'Nguyễn Thịnh', 'thinhnguyen@gmail.com', '0988999000', 'Tôi muốn hỏi về quy trình mua sản phẩm bên công ty. Bên công ty có hỗ trợ giao hàng cho tôi miễn phí?', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `tbl_san_pham`
+--
+
+CREATE TABLE `tbl_san_pham` (
+  `id_san_pham` int(11) NOT NULL,
+  `ten_san_pham` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `mo_ta` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `anh_minh_hoa` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `gia_ban` float NOT NULL,
+  `ghi_chu` text COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `tbl_san_pham`
+--
+
+INSERT INTO `tbl_san_pham` (`id_san_pham`, `ten_san_pham`, `mo_ta`, `anh_minh_hoa`, `gia_ban`, `ghi_chu`) VALUES
+(1, 'JAVEN WATER - C30', '    Nước Javen (Giaven) là dung dịch của hỗn hợp hai muối: muối ăn (NaCl) và Natri hypochlorit (NaClO), có màu vàng nhạt, mùi hắc, có tính kiềm và là chất ôxy hóa mạnh.\r\n\r\n    Nước Javen (giaven) là hợp chất rất thông dụng dùng trong công nghiệp và dân dụng. Nước giaven được dùng để ôxy hóa các chất màu, tẩy trắng vải sợi, khử trùng nước sinh hoạt, trong chăn nuôi, nước bể bơi và các vật dụng y tế trong bệnh viện ...\r\n\r\n    Thiết bị JAVEN WATER ứng dụng công nghệ điện phân muối ăn, được sử dụng ', '', 0, ''),
+(2, 'JAVEN WATER - C500', '    Nước Javen (Giaven) là dung dịch của hỗn hợp hai muối: muối ăn (NaCl) và Natri hypochlorit (NaClO), có màu vàng nhạt, mùi hắc, có tính kiềm và là chất ôxy hóa mạnh.\r\n\r\n    Nước Javen (giaven) là hợp chất rất thông dụng dùng trong công nghiệp và dân dụng. Nước giaven được dùng để ôxy hóa các chất màu, tẩy trắng vải sợi, khử trùng nước sinh hoạt, trong chăn nuôi, nước bể bơi và các vật dụng y tế trong bệnh viện ...\r\n\r\n    Thiết bị JAVEN WATER ứng dụng công nghệ điện phân muối ăn, được sử dụng ', '', 0, ''),
+(3, 'JAVEN WATER - C1000', 'Nước Javen (Giaven) là dung dịch của hỗn hợp hai muối: muối ăn (NaCl) và Natri hypochlorit (NaClO), có màu vàng nhạt, mùi hắc, có tính kiềm và là chất ôxy hóa mạnh.\r\n\r\nNước Javen (Giaven) là hợp chất rất thông dụng dùng trong công nghiệp và dân dụng. Nước giaven được dùng để ôxy hóa các chất màu, tẩy trắng vải sợi, khử trùng nước sinh hoạt,trong chăn nuôi, nước bể bơi và các vật dụng y tế trong bệnh viện ...\r\n\r\n', '', 0, ''),
+(4, 'JAVEN WATER - C1500', 'Nước Javen (Giaven) là dung dịch của hỗn hợp hai muối: muối ăn (NaCl) và Natri hypochlorit (NaClO), có màu vàng nhạt, mùi hắc, có tính kiềm và là chất ôxy hóa mạnh.\r\n\r\nNước Javen (Giaven) là hợp chất rất thông dụng dùng trong công nghiệp và dân dụng. Nước giaven được dùng để ôxy hóa các chất màu, tẩy trắng vải sợi, khử trùng nước sinh hoạt,trong chăn nuôi, nước bể bơi và các vật dụng y tế trong bệnh viện ...', '', 0, '');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `tbl_tin_tuc`
 --
 
 CREATE TABLE `tbl_tin_tuc` (
@@ -34,19 +81,19 @@ CREATE TABLE `tbl_tin_tuc` (
   `mo_ta` varchar(500) NOT NULL,
   `noi_dung` text NOT NULL,
   `anh_minh_hoa` varchar(50) NOT NULL,
-  `is_active` int(11) NOT NULL DEFAULT '1',
-  `is_stick` int(11) NOT NULL DEFAULT '2',
-  `total_read` int(11) NOT NULL DEFAULT '0',
-  `ghi_chu` text,
+  `is_active` int(11) NOT NULL DEFAULT 1,
+  `is_stick` int(11) NOT NULL DEFAULT 2,
+  `total_read` int(11) NOT NULL DEFAULT 0,
+  `ghi_chu` text DEFAULT NULL,
   `created_by` int(11) DEFAULT NULL,
-  `created_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_time` timestamp NOT NULL DEFAULT current_timestamp(),
   `modified_by` int(11) DEFAULT NULL,
   `modified_time` datetime DEFAULT NULL,
-  `modified_log` text
+  `modified_log` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_tin_tuc`
+-- Đang đổ dữ liệu cho bảng `tbl_tin_tuc`
 --
 
 INSERT INTO `tbl_tin_tuc` (`tin_tuc_id`, `tieu_de`, `mo_ta`, `noi_dung`, `anh_minh_hoa`, `is_active`, `is_stick`, `total_read`, `ghi_chu`, `created_by`, `created_time`, `modified_by`, `modified_time`, `modified_log`) VALUES
@@ -59,7 +106,7 @@ INSERT INTO `tbl_tin_tuc` (`tin_tuc_id`, `tieu_de`, `mo_ta`, `noi_dung`, `anh_mi
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_user`
+-- Cấu trúc bảng cho bảng `tbl_user`
 --
 
 CREATE TABLE `tbl_user` (
@@ -70,18 +117,18 @@ CREATE TABLE `tbl_user` (
   `anh_dai_dien` varchar(50) DEFAULT NULL,
   `so_dien_thoai` varchar(20) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
-  `quyen_han_id` int(11) NOT NULL DEFAULT '1',
-  `is_active` int(11) NOT NULL DEFAULT '1',
-  `ghi_chu` text,
+  `quyen_han_id` int(11) NOT NULL DEFAULT 1,
+  `is_active` int(11) NOT NULL DEFAULT 1,
+  `ghi_chu` text DEFAULT NULL,
   `created_by` int(11) DEFAULT NULL,
-  `created_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_time` timestamp NOT NULL DEFAULT current_timestamp(),
   `modified_by` int(11) DEFAULT NULL,
   `modified_time` datetime DEFAULT NULL,
-  `modified_log` text
+  `modified_log` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_user`
+-- Đang đổ dữ liệu cho bảng `tbl_user`
 --
 
 INSERT INTO `tbl_user` (`user_id`, `ten_tai_khoan`, `mat_khau`, `ho_va_ten`, `anh_dai_dien`, `so_dien_thoai`, `email`, `quyen_han_id`, `is_active`, `ghi_chu`, `created_by`, `created_time`, `modified_by`, `modified_time`, `modified_log`) VALUES
@@ -89,33 +136,57 @@ INSERT INTO `tbl_user` (`user_id`, `ten_tai_khoan`, `mat_khau`, `ho_va_ten`, `an
 (2, 'huycv@bav.edu.vn', '123', 'Chu Văn Huy', NULL, NULL, 'huycv@bav.edu.vn', 1, 1, NULL, NULL, '2021-03-22 03:32:05', NULL, NULL, NULL);
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `tbl_tin_tuc`
+-- Chỉ mục cho bảng `tbl_lien_he`
+--
+ALTER TABLE `tbl_lien_he`
+  ADD PRIMARY KEY (`id_lien_he`);
+
+--
+-- Chỉ mục cho bảng `tbl_san_pham`
+--
+ALTER TABLE `tbl_san_pham`
+  ADD PRIMARY KEY (`id_san_pham`);
+
+--
+-- Chỉ mục cho bảng `tbl_tin_tuc`
 --
 ALTER TABLE `tbl_tin_tuc`
   ADD PRIMARY KEY (`tin_tuc_id`);
 
 --
--- Indexes for table `tbl_user`
+-- Chỉ mục cho bảng `tbl_user`
 --
 ALTER TABLE `tbl_user`
   ADD PRIMARY KEY (`user_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `tbl_tin_tuc`
+-- AUTO_INCREMENT cho bảng `tbl_lien_he`
+--
+ALTER TABLE `tbl_lien_he`
+  MODIFY `id_lien_he` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT cho bảng `tbl_san_pham`
+--
+ALTER TABLE `tbl_san_pham`
+  MODIFY `id_san_pham` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT cho bảng `tbl_tin_tuc`
 --
 ALTER TABLE `tbl_tin_tuc`
   MODIFY `tin_tuc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `tbl_user`
+-- AUTO_INCREMENT cho bảng `tbl_user`
 --
 ALTER TABLE `tbl_user`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
